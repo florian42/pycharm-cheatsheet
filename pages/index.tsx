@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import { chakra, Text, Box } from "@chakra-ui/react";
+import Image from "next/image";
+import { chakra, Text, Box, Heading } from "@chakra-ui/react";
 import Category from "../components/category";
 
 const Home: NextPage = () => {
@@ -9,9 +10,20 @@ const Home: NextPage = () => {
       <Head>
         <title>PyCharm Cheatsheet</title>
         <meta name="description" content="My Personal PyCharm Cheatsheet" />
-        <link rel="icon" href="/favicon.ico" />
+        <link
+          rel="icon"
+          href="https://upload.wikimedia.org/wikipedia/commons/1/1d/PyCharm_Icon.svg"
+        />
       </Head>
-
+      <Box width={"48px"} height={"48px"} margin={"24px auto"}>
+        <Image
+          src={
+            "https://upload.wikimedia.org/wikipedia/commons/1/1d/PyCharm_Icon.svg"
+          }
+          width={"100%"}
+          height={"100%"}
+        />
+      </Box>
       <chakra.main minHeight={"100vh"} padding={"16px"}>
         <Category />
       </chakra.main>
