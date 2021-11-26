@@ -1,5 +1,12 @@
-import { List, Box, Heading, SimpleGrid } from "@chakra-ui/react";
+import {
+  List,
+  Box,
+  Heading,
+  SimpleGrid,
+  useColorModeValue,
+} from "@chakra-ui/react";
 import Shortcut from "./shortcut";
+import theme from "../theme";
 
 const shortcuts = [
   {
@@ -33,10 +40,15 @@ const shortcuts = [
 ];
 
 export default function Category() {
+  const boxBackgroundColor = useColorModeValue(
+    theme.colors.white,
+    theme.colors.gray["700"]
+  );
   return (
     <SimpleGrid columns={{ sm: 1, md: 2, lg: 3 }} spacing={"40px"}>
       {shortcuts.map((category) => (
         <Box
+          backgroundColor={boxBackgroundColor}
           minWidth={"300px"}
           maxWidth={"400px"}
           boxShadow={"xl"}
