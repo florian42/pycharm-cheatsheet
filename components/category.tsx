@@ -1,4 +1,4 @@
-import { List, Box, Heading } from "@chakra-ui/react";
+import { List, Box, Heading, SimpleGrid } from "@chakra-ui/react";
 import Shortcut from "./shortcut";
 
 const shortcuts = [
@@ -11,17 +11,34 @@ const shortcuts = [
           "Jump forward or backward in this history of your cursor. For instance, this helps to quickly go back to where you were before following a code path (Main menu -> Navigate -> Back/Forward)",
         keys: ["cmd", "alt", "left"],
       },
+      {
+        title: "last edit location",
+        description:
+          "Jump backward to the cursor where you last edited code. This is sometimes more efficient than pressing the above shortcut keys multiple times. (Main menu -> Navigate -> Last edit location)",
+        keys: ["cmd", "shift", "backspace"],
+      },
+      {
+        title: "extend selection",
+        description:
+          "Extend or shrink currently selected text/code, with code-sensing: wherever your cursor is, by repeatedly pressing the shortcut keys, it will select more and more (or less and less) of the surrounding code of your cursor. See video below. (Extend selection, Shrink selection)",
+        keys: ["option", "up"],
+      },
     ],
   },
+  { category: "Code Navigation", shortcuts: [] },
+  { category: "Code Generation", shortcuts: [] },
+  { category: "Code and Text Manipulation", shortcuts: [] },
+  { category: "Refactoring", shortcuts: [] },
+  { category: "Copy & Paste", shortcuts: [] },
 ];
 
 export default function Category() {
   return (
-    <List>
+    <SimpleGrid columns={{ sm: 1, md: 3 }} spacing={"40px"}>
       {shortcuts.map((category) => (
         <Box
-          maxWidth={"350px"}
-          boxShadow={"2xl"}
+          width={"400px"}
+          boxShadow={"xl"}
           rounded={"lg"}
           p={6}
           textAlign={"center"}
@@ -51,6 +68,6 @@ export default function Category() {
           </List>
         </Box>
       ))}
-    </List>
+    </SimpleGrid>
   );
 }
