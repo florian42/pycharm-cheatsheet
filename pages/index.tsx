@@ -5,7 +5,7 @@ import Category from "../components/category";
 
 const Home: NextPage = () => {
   return (
-    <Box padding="0 2rem">
+    <Box>
       <Head>
         <title>PyCharm Cheatsheet</title>
         <meta name="description" content="My Personal PyCharm Cheatsheet" />

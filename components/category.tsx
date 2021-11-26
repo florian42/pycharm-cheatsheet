@@ -34,10 +34,11 @@ const shortcuts = [
 
 export default function Category() {
   return (
-    <SimpleGrid columns={{ sm: 1, md: 3 }} spacing={"40px"}>
+    <SimpleGrid columns={{ sm: 1, md: 2, lg: 3 }} spacing={"40px"}>
       {shortcuts.map((category) => (
         <Box
-          width={"400px"}
+          minWidth={"300px"}
+          maxWidth={"400px"}
           boxShadow={"xl"}
           rounded={"lg"}
           p={6}

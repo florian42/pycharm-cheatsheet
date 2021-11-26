@@ -16,13 +16,13 @@ export default function Shortcut({
       margin={"4px"}
       padding={"2px 4px"}
       _hover={{
-        backgroundColor: "teal.500",
+        backgroundColor: "teal.300",
       }}
     >
       <Text marginRight={"6px"}>{title}:</Text>
       {keys.map((key, index) => (
         <>
-          <Kbd key={key}>{key}</Kbd>
+          <Kbd key={key + index}>{key}</Kbd>
           {index !== lastKey ? " + " : undefined}
         </>
       ))}
