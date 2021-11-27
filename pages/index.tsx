@@ -23,6 +23,7 @@ const Home: NextPage = () => {
           }
           width={"100%"}
           height={"100%"}
+          alt="PyCharm IDE Logo"
         />
       </Box>
       <chakra.main minHeight={"100vh"} padding={"16px"}>
