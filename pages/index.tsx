@@ -1,7 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
-import { chakra, Text, Box, Heading, Link } from "@chakra-ui/react";
+import { chakra, Text, Box, Link, useColorModeValue } from "@chakra-ui/react";
 import Category from "../components/category";
 import { ExternalLinkIcon } from "@chakra-ui/icons";
 
