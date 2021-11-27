@@ -1,8 +1,9 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
-import { chakra, Text, Box, Heading } from "@chakra-ui/react";
+import { chakra, Text, Box, Heading, Link } from "@chakra-ui/react";
 import Category from "../components/category";
+import { ExternalLinkIcon } from "@chakra-ui/icons";
 
 const Home: NextPage = () => {
   return (
@@ -35,7 +36,17 @@ const Home: NextPage = () => {
         borderTop={"1px solid #eaeaea"}
         justifyContent={"center"}
         alignItems={"center"}
+        flexDirection="column"
       >
+        Inspired by:
+        <Link
+          href="https://www.augmentedmind.de/2020/04/26/boost-development-productivity-ide/"
+          isExternal
+        >
+          How to boost development productivity with the 36 best keyboard
+          shortcuts
+          <ExternalLinkIcon mx="2px" />
+        </Link>
         <Text>Created With ☕</Text>
       </chakra.footer>
     </Box>
