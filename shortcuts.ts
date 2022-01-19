@@ -48,6 +48,12 @@ const shortcuts = [
           "Extend or shrink currently selected text/code, with code-sensing: wherever your cursor is, by repeatedly pressing the shortcut keys, it will select more and more (or less and less) of the surrounding code of your cursor. See video below. (Extend selection, Shrink selection)",
         keys: ["option", "up"],
       },
+      {
+        title: "go to next splitter",
+        description:
+          "Switch between editor windows when you are in split screen.",
+        keys: ["option", "tab"],
+      },
     ],
   },
   {
@@ -69,6 +75,7 @@ const shortcuts = [
       { title: "Delete Line", keys: ["cmd", "backspace"] },
       { title: "Unwrap/Remove", keys: ["cmd", "shift", "backspace"] },
       { title: "Surround With…", keys: ["cmd", "option", "t"] },
+      { title: "Select Next Occurrence", keys: ["ctrl", "g"] },
     ],
   },
   {

@@ -15,7 +15,7 @@ export default function Category() {
     theme.colors.gray["700"]
   );
   return (
-    <SimpleGrid columns={{ sm: 1, md: 2, lg: 3 }} spacing={"40px"}>
+    <SimpleGrid minChildWidth={"340px"} spacing={"40px"}>
       {shortcuts.map((category) => (
         <Box
           backgroundColor={boxBackgroundColor}
